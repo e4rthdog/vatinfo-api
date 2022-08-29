@@ -1,6 +1,7 @@
 <?php
 
 try {
+    ob_start();
     require 'vatinfo-panels-config.php';
 
     $pdo = new PDO('mysql:host=' . $database_host . '; dbname=' . $database_name, $database_user, $database_password);
@@ -42,7 +43,7 @@ try {
             $stmt->execute();
         }
     } elseif ($action == "load") {
-        $query = "select * from vatinfo where ident='" . $ident . "'";
+        $query = "select ident,cid,metar,filter_division from vatinfo where ident='" . $ident . "'";
 
         $stmt = $pdo->prepare($query);
         $stmt->execute();
@@ -59,6 +60,7 @@ try {
     header("Content-Type:application/json");
     header('Access-Control-Allow-Origin: *');
     header("Access-Control-Allow-Headers: {$_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']}");
+    ob_end_clean();
     echo json_encode($response, JSON_PRETTY_PRINT);
 } catch (PDOException $e) {
     echo 'Database error. ' . $e->getMessage();
