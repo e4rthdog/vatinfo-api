@@ -1,22 +1,22 @@
 # VATINFO-API
 
-A not-proud-of-making-it-like-this api foy me [VATINFO](https://github.com/e4rthdog/vatinfo) app.
+A not-proud-of-making-it-like-this api for my [VATINFO](https://github.com/e4rthdog/vatinfo) app.
 
 ## Installation
 
 ---
 
--   Clone the repo.
--   Run `composer install`
--   Copy the `vatinfo-panels-config-example.php` file to `vatinfo-panels-config.php` and _**update**_ the file with your actual access and database information.
--   Create the MySQL database by importing the file `vatinfo-database.sql`
--   Serve the directory
+- Clone the repo.
+- Run `composer install`
+- Copy the `vatinfo-panels-config-example.php` file to `vatinfo-panels-config.php` and _**update**_ the file with your actual access and database information.
+- Create the MySQL database by importing the file `vatinfo-database.sql`
+- Serve the directory
 
 ## Libraries Used
 
 ---
 
--   [VATSIMPHP](https://github.com/skymeyer/Vatsimphp). Most of the data are proxied from official VATSIM data using this library.
+- [VATSIMPHP](https://github.com/skymeyer/Vatsimphp). Most of the data are proxied from official VATSIM data using this library.
 
 ## Files aka "endpoints" :)
 
