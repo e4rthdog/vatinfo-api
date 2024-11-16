@@ -1,5 +1,5 @@
 {
-    "require": {
-        "skymeyer/vatsimphp": "^1.0"
-    }
+	"require": {
+		"skymeyer/vatsimphp": "^2.0"
+	}
 }
